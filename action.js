@@ -32,10 +32,4 @@ function compare(res) {
     }
 }
 
-function clean(){
-    document.getElementById('leftOp').innerText='';
-    document.getElementById('rightOp').innerText='';
-    document.getElementById('result').innerText='';
-
-}
 
