@@ -1,17 +1,41 @@
 
-function clicked() {
+function calculate() {
     var leftOp = document.getElementById('leftOp').value;
     var rightOp = document.getElementById('rightOp').value;
     var operator = document.getElementById('op').value;
+    var res;
     if(operator=='+'){
-        document.getElementById('display').innerHTML = leftOp+rightOp ;
+        res = eval(leftOp)+eval(rightOp) ;
     }else if(operator=='-'){
-        document.getElementById('display').innerHTML = leftOp-rightOp ;
+        res = leftOp-rightOp ;
     }else if(operator=='*'){
-        document.getElementById('display').innerHTML = leftOp*rightOp ;
+        res = leftOp*rightOp ;
     }else{
-        document.getElementById('display').innerHTML = leftOp/rightOp ;
+        res = leftOp/rightOp ;
+    }
+    compare(res);
+}
+
+
+
+function compare(res) {
+    var userRes = document.getElementById('result').value;
+    if (userRes == null || userRes==""){
+        return;
+    }else {
+        if (res == userRes) {
+            document.getElementById('display').innerText = "¡CORRECTO!";
+
+        } else {
+            document.getElementById('display').innerText = "¡INCORRECTO!";
+        }
     }
 }
 
-document.getElementById('btn').addEventListener('click', clicked);;
+function clean(){
+    document.getElementById('leftOp').innerText='';
+    document.getElementById('rightOp').innerText='';
+    document.getElementById('result').innerText='';
+
+}
+
