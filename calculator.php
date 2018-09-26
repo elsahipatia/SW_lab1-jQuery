@@ -8,6 +8,7 @@
 <h1>Arithmetic Calculator</h1>
 <table>
     <tr>
+        <img src="kids.png" width="300" height="300" >
         <td align="left">Left hand side operand: </td>
         <td><input id="leftOp" type="text" oninput="calculate()"/></td>
     </tr>
@@ -30,7 +31,7 @@
     </tr>
 
     <tr>
-        <td><button id="cleanBtn" onclick="clean()">Clean</button></td>
+        <td><button id="cleanBtn" onclick="document.getElementById('leftOp').value = ''; document.getElementById('rightOp').value = ''; document.getElementById('result').value = ''">Clean</button></td>
     </tr>
 </table>
 <div id="display"></div>
