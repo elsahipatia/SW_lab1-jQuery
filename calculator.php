@@ -30,4 +30,5 @@
     </table>
     <div id="display"></div>
 </body>
+<script type="text/javascript" src=""></script>
 </html>
