@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script language="JavaScript" src="action.js"></script>
     <meta charset="utf-8">
     <title>Arithmetic Calculator</title>
 </head>
@@ -9,11 +10,11 @@
     <table>
         <tr>
             <td align="left">Left hand side operand: </td>
-            <td><input id="leftOp" type="text"/></td>
+            <td><input id="leftOp" type="text"></td>
         </tr>
         <tr>
             <td align="left">Right hand side operand: </td>
-            <td><input id="rightOp" type="text"/></td>
+            <td><input id="rightOp" type="text"></td>
         </tr>
         <tr>
             <td align="left">Operator: </td>
