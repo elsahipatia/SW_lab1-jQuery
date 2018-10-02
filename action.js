@@ -3,27 +3,6 @@ function loadImages() {
     document.getElementById("sadMonkey").style.display="none";
 }
 
-
-
-function calculate() {
-    var leftOp = document.getElementById('leftOp').value;
-    var rightOp = document.getElementById('rightOp').value;
-    var operator = document.getElementById('op').value;
-    var res;
-    if(operator=='+'){
-        res = eval(leftOp)+eval(rightOp) ;
-    }else if(operator=='-'){
-        res = leftOp-rightOp ;
-    }else if(operator=='*'){
-        res = leftOp*rightOp ;
-    }else{
-        res = leftOp/rightOp ;
-    }
-    compare(res);
-}
-
-
-
 function compare(res) {
     var userRes = document.getElementById('result').value;
     if (userRes == null || userRes==""){
@@ -46,22 +25,6 @@ function compare(res) {
     }
 }
 
-function clean(){
-    document.getElementById('leftOp').value='';
-    document.getElementById('rightOp').value='';
-    document.getElementById('result').value='';
-    var sadImg = document.getElementById("sadMonkey");
-    var happyImg = document.getElementById("happyMonkey");
-    var r = document.getElementById('display');
-    if (happyImg.style.display != "none")
-        happyImg.style.display = "none";
-    if (sadImg.style.display != "none"){
-        sadImg.style.display ="none";
-    }
-    r.innerText="";
-
-}
-
 function addImageCorrect(){
     var sadImg = document.getElementById("sadMonkey");
     var happyImg = document.getElementById("happyMonkey");
@@ -79,3 +42,4 @@ function addImageIncorrect(){
     }
     sadImg.style.display = "inline";
 }
+
